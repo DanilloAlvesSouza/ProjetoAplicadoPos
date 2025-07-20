@@ -38,7 +38,7 @@ def processar_futuros_di(insumos):
             if isinstance(vencimento, str):
                 vencimento = datetime.strptime(vencimento, "%Y-%m-%d").date()
             du = ContaDiaUtil(vencimento)
-            if bool(os.environ.get("ConvertePUFator")) == True:
+            if os.environ.get("ConvertePUFator", "False").lower() in ("1", "true", "yes"):
                 pu = taxa_para_pu(ultimo_preco, du)
             else:
                 pu = Decimal(ultimo_preco)
