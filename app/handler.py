@@ -22,7 +22,7 @@ def handler(event, context):
                     plt.plot(prazos, valores, marker='o')
                     plt.title('Curva de Juros Interpolada')
                     plt.xlabel('Prazo (dias úteis)')
-                    plt.ylabel('PU ou Taxa')
+                    plt.ylabel('Taxa')
                     plt.grid(True)
                     plt.show()
                 # ----------------------------------------------------------
