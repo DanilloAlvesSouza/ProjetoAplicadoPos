@@ -1,0 +1,6 @@
+numpy==1.26.4
+scipy==1.13.1
+
+##PARA EXECUÇÃO LOCAL IMPORTAR OS ABAIXO
+# matplotlib==3.9.0
+# pytest==8.2.2

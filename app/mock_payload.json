@@ -1,0 +1,20 @@
+{
+    "Records": [
+      {
+        "messageId": "1",
+        "receiptHandle": "xyz",
+        "body": "{\"Categoria\":\"Futuros_DI\",\"insumos\":[{\"Ativo\":{\"Nome\":\"FUTURO_DI1Q25\",\"Vencimento\":\"2025-08-01\",\"Atributos\":{\"Ultimo_Preco\":14.91,\"Preco_Medio\":14.89,\"Preco_Abertura\":14.90,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1U25\",\"Vencimento\":\"2025-09-01\",\"Atributos\":{\"Ultimo_Preco\":14.92,\"Preco_Medio\":14.90,\"Preco_Abertura\":14.89,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1V25\",\"Vencimento\":\"2025-10-01\",\"Atributos\":{\"Ultimo_Preco\":14.93,\"Preco_Medio\":14.91,\"Preco_Abertura\":14.90,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1X25\",\"Vencimento\":\"2025-11-01\",\"Atributos\":{\"Ultimo_Preco\":14.94,\"Preco_Medio\":14.92,\"Preco_Abertura\":14.91,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1Z25\",\"Vencimento\":\"2025-12-01\",\"Atributos\":{\"Ultimo_Preco\":14.94,\"Preco_Medio\":14.93,\"Preco_Abertura\":14.91,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1F26\",\"Vencimento\":\"2026-01-02\",\"Atributos\":{\"Ultimo_Preco\":14.93,\"Preco_Medio\":14.92,\"Preco_Abertura\":14.90,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1G26\",\"Vencimento\":\"2026-02-01\",\"Atributos\":{\"Ultimo_Preco\":14.91,\"Preco_Medio\":14.91,\"Preco_Abertura\":14.89,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1H26\",\"Vencimento\":\"2026-03-01\",\"Atributos\":{\"Ultimo_Preco\":14.90,\"Preco_Medio\":14.90,\"Preco_Abertura\":14.90,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1J26\",\"Vencimento\":\"2026-04-01\",\"Atributos\":{\"Ultimo_Preco\":14.89,\"Preco_Medio\":14.91,\"Preco_Abertura\":14.88,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1K26\",\"Vencimento\":\"2026-05-01\",\"Atributos\":{\"Ultimo_Preco\":14.91,\"Preco_Medio\":14.91,\"Preco_Abertura\":14.90,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1M26\",\"Vencimento\":\"2026-06-01\",\"Atributos\":{\"Ultimo_Preco\":14.91,\"Preco_Medio\":14.92,\"Preco_Abertura\":14.89,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1N26\",\"Vencimento\":\"2026-07-01\",\"Atributos\":{\"Ultimo_Preco\":14.92,\"Preco_Medio\":14.93,\"Preco_Abertura\":14.91,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1Q26\",\"Vencimento\":\"2026-08-01\",\"Atributos\":{\"Ultimo_Preco\":14.93,\"Preco_Medio\":14.91,\"Preco_Abertura\":14.90,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1U26\",\"Vencimento\":\"2026-09-01\",\"Atributos\":{\"Ultimo_Preco\":14.94,\"Preco_Medio\":14.92,\"Preco_Abertura\":14.91,\"Provedor_Negociado\":\"B3\"}}},{\"Ativo\":{\"Nome\":\"FUTURO_DI1V26\",\"Vencimento\":\"2026-10-01\",\"Atributos\":{\"Ultimo_Preco\":14.93,\"Preco_Medio\":14.91,\"Preco_Abertura\":14.91,\"Provedor_Negociado\":\"B3\"}}}]}",
+        "attributes": {
+          "ApproximateReceiveCount": "1",
+          "SentTimestamp": "1650000000000",
+          "SenderId": "AWSAccountID",
+          "ApproximateFirstReceiveTimestamp": "1650000001000"
+        },
+        "messageAttributes": {},
+        "md5OfBody": "9b3d4c24bfa...etc",
+        "eventSource": "aws:sqs",
+        "eventSourceARN": "arn:aws:sqs:us-east-1:123456789012:minha-fila",
+        "awsRegion": "us-east-1"
+      }
+    ]
+  }
