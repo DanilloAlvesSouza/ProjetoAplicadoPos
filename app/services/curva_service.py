@@ -1,9 +1,9 @@
-from models.ativo import Ativo
+from app.models.ativo import Ativo
 from datetime import datetime
 from decimal import Decimal
-from Utils.utils import ContaDiaUtil
-from services.calculos_service import taxa_para_pu
-from services.interpolador import interporlador_pu
+from app.Utils.utils import ContaDiaUtil
+from app.services.calculos_service import taxa_para_pu
+from app.services.interpolador import interporlador_pu
 import os
 
 def montaAtivosD1(insumos):
