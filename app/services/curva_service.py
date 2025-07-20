@@ -4,6 +4,7 @@ from decimal import Decimal
 from Utils.utils import ContaDiaUtil
 from services.calculos_service import taxa_para_pu
 from services.interpolador import interporlador_pu
+import os
 
 def montaAtivosD1(insumos):
     ativos = []
@@ -37,7 +38,11 @@ def processar_futuros_di(insumos):
             if isinstance(vencimento, str):
                 vencimento = datetime.strptime(vencimento, "%Y-%m-%d").date()
             du = ContaDiaUtil(vencimento)
-            pu = taxa_para_pu(ultimo_preco, du)
+            if bool(os.environ.get("ConvertePUFator")) == True:
+                pu = taxa_para_pu(ultimo_preco, du)
+            else:
+                pu = Decimal(ultimo_preco)
+            
             resultado = {
                 'Nome': ativo['Nome'],
                 'Vencimento': vencimento,

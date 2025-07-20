@@ -2,6 +2,7 @@ import numpy as np
 from scipy.interpolate import interp1d
 from decimal import Decimal
 from datetime import timedelta
+import os
 
 def interporlador_pu(curva_prazos):
     """
@@ -12,11 +13,13 @@ def interporlador_pu(curva_prazos):
         raise ValueError("É necessário pelo menos dois pontos para interpolação.")
 
     prazos = [r['DU'] for r in curva_prazos]
-    pus = [float(r['PU']) for r in curva_prazos]
+    pu = [float(r['PU']) for r in curva_prazos]
     datas = {r['DU']: r['Vencimento'] for r in curva_prazos}  # Mapeia DU para data
 
-    pu_log = np.log(pus)
-    interpolador_log = interp1d(prazos, pu_log, kind='linear', fill_value="extrapolate")
+    if os.environ.get("METODO_INTERPORLACAO") == "EXPONENCIAL":
+        pu = np.log(pu)
+    
+    interpolador_log = interp1d(prazos, pu, kind='linear', fill_value="extrapolate")
 
     menor_prazo = int(min(prazos))
     maior_prazo = int(max(prazos))
@@ -25,8 +28,10 @@ def interporlador_pu(curva_prazos):
     curva_interpolada = []
     data_anterior = None
     for du in prazos_interpolados:
-        log_pu_interp = interpolador_log(du)
-        pu_interp = float(np.exp(log_pu_interp))
+        pu_interp = float(interpolador_log(du))
+        if os.environ.get("METODO_INTERPORLACAO") == "EXPONENCIAL":
+            pu_interp = float(np.exp(pu_interp))
+        
         data_venc = datas.get(du, None)
         if data_venc is None:
             if data_anterior is not None:
@@ -37,14 +42,3 @@ def interporlador_pu(curva_prazos):
         data_anterior = data_venc
 
     return curva_interpolada
-
-# # Exemplo de uso:
-# curvaPrazos = [
-#     {'DU': 100, 'PU': 10, 'Vencimento': '2023-01-01'},
-#     {'DU': 200, 'PU': 20, 'Vencimento': '2023-02-01'},
-#     {'DU': 300, 'PU': 30, 'Vencimento': '2023-03-01'},
-# ]
-
-# curva_interpolada = interpolar_pu(curvaPrazos)
-# for ponto in curva_interpolada:
-#     print(f"DU={ponto['DU']}, PU={ponto['PU']:.6f}, Vencimento={ponto['Vencimento']}")
